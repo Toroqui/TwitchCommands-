@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>TWITCH</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+
+<body>
+  <header>
+    <section>
+      <div>
+        <h1>COMANDOS PARA TWITCH</h1>
+        <h2 class="subtitulo">ESTA PÁGINA FUE CREADA POR UN MODERADOR PEQUEÑO DE TWITCH, AQUI MUESTRA LOS COMANDOS MAS USADOS PARA UN CANAL DE TWITCH</h2>
+      </div>
+      <div class="botones">
+      <div class="boton1"> 
+        <h2 class="subtitulo2"> BOTS </h2>
+       <a href="https://nightbot.tv/"><button>AGREGAR EL BOT NIGHTBOT</button></a>
+      </div>
+      <div class="boton2">
+        <a href="https://streamelements.com/"><button>AGREGAR EL BOT STREAMELEMENTS</button></a>
+      </div>
+      </div>
+    </section>
+    <section>
+      <div>
+ <h2 class="subtitulo3">COMANDOS MAS USADOS</h2>
+      </div>
+      <div class="columns">
+        <div class="1">!addcom !stats Stats del canal: $(twitch $(channel) "{{viewers}} viewers👀, {{views}} views👁️, {{followers}} followers")💜, $(twitch $(channel) "{{displayName}} tiene {{subscriberCount}} subs .") :star:
+
+           <p class="p1"> <span class="material-symbols-outlined">
+tools_wrench
+</span> Este comando dice las estadísticas de tu canal.</p>
+        </div>
+        <div class="2">!addcom !followage $(urlfetch https://2g.be/twitch/following.php?user=$(touser)&channel=$(channel)&format=ymwd)
+
+        <p class="p2"> <span class="material-symbols-outlined">
+person_2
+</span>Este comando dice hace cuanto un usuario sigue el canal.</p>
+    </div>
+        <div class="3">!addcom !uptime Estoy On hace $(twitch "{{uptimeLength}}")
+        
+
+        <p class="p3"><span class="material-symbols-outlined">
+nest_clock_farsight_analog
+</span>Este comando dice el tiempo de trasmisión de un canal de Twitch.</p>
+    </div>
+        <div class="4">
+            !addcom !modinfo $(eval req = JSON.parse(`$(urlfetch json https://modlookup.3v.fi/api/user-totals/$(touser))`); if(req.status=200) `@$(touser) modera ${req.total} canales que suman un total de ${req.follows} follows`; else `Ocurrió un error al buscar a @$(touser)`;)
+            
+           <p class="p4"> <span class="material-symbols-outlined">
+receipt_long
+</span>Este comando dice cuantos canales modera un usuario de Twitch.</p>
+        </div>
+        <div class="5">!addcom !subs $(twitch $(channel) "{{displayName}} <br> tiene {{subscriberCount}} suscriptores.")
+        
+          <p class="p5"> <span class="material-symbols-outlined">
+workspace_premium
+</span>Este comando dice cuantos subs tiene tu canal de Twitch.</p>
+        </div>
+        <div class="6">!addcom !hora /me El horario en Argentina es: $(time America/Argentina/Buenos_Aires)
+
+            <p class="p6">   <span class="material-symbols-outlined">
+hourglass_bottom
+</span>Este comando dice la hora actual ( solo ARG ). </p>
+        </div>
+      </div>
+      <div class="columns2">
+        <div class="7">!addcom !clip $(urlfetch https://api.thefyrewire.com/twitch/clips/create/d706<br>5e9c1c4736f3afa062fe24b6ffc8?channel=$(channel))
+
+            <p class="p7">  <span class="material-symbols-outlined">
+video_chat
+</span> Este comando sirve para que cualquier viwer pueda hacer un clip, poniendo !clip en el chat.</p>
+        </div>
+        <div class="8">!addcom !Seguir Si queres podes pasarte por el canal <br>de $(touser) en https://www.twitch.tv/$(touser) que vicio a $(twitch game $(touser))
+            <p class="p8"> <span class="material-symbols-outlined">
+heart_plus
+</span>Este comando sirve para recomendar otro canal de Twitch en el chat. </p>
+        </div>
+        </div>
+    </section>
+    <section class="info">
+      <div>
+<p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+      </div>
+      <div>
+        <p>Si queres que algunos comandos solamente puedan ejecutarlos los moderadores de tu canal, debes escribir en el chat: !editcom (nombredelcomando) -ul=moderator</p>
+        <p>Si queres que también los vips puedan usar ciertos comandos, debes escribir en el chat: !editcom (nombredelcomando) -ul=twitch_vip</p>
+      </div>
+      <div>
+        <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+      </div>
+      <div>
+        <p>Para acortar o alargar el tiempo de uso de los comandos en el chat: !editcom - (nombredelcomando) cd=5 (cantidad de segundos, puede variar entre 5 y 120 segundos)</p>
+      </div>
+       <div>
+        <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+      </div>
+      <div>
+        <p>Nightbot es un bot el cual te brinda muchas funciones de moderación una de ellas es evitar el spam (enviar comentarios repetitivos, enviar links o enviar una cantidad excesiva de emotes) Si quieres activar esta función debes poner en el chat !Filters a continuación lo que deseas activar: repetitions/symbols/links/emotes/caps/blacklist. Luego enable si deseas activarlo o disable si deseas desactivarlo, recuerda que con enable el nightbot bloqueara el tipo de spam que seleccionaste y con disable lo desactivará si no deseas que bloqueé el spam en tu chat de Twitch.</p>
+      </div>
+    </section>
+    <section class="toro">
+      <div>
+        <h2>CONTACTAME AL SUSURRO EN TWITCH</h2>
+        <a href="https://www.twitch.tv/toroqui2100"><button>TWITCH.TV/TOROQUI2100</button></a>
+      </div>
+      <div>
+        <h2>CONTACTAME POR MD/DM AL INSTAGRAM</h2>
+        <a href="https://www.instagram.com/toroqui2100/"><button>TOROQUI2100</button></a>
+      </div>
+    </section>
+  </header>
+  <main>
+    
+  </main>
+  <footer>
+    
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>
+
